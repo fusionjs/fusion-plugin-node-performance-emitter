@@ -177,9 +177,11 @@ export default ({config, EventEmitter, timers = nodeTimers}) => {
           'gauge:globalAgentRequests',
           getCountFromGlobalAgent(globalAgent.requests)
         );
-        // TODO: freeSockets was added in v0.11.4 - add this when we migrate to a
-        // new version of node
-        // emit('gauge:globalAgentRequests', getCountFromGlobalAgent(globalAgent.freeSockets));
+        // number of free sockets
+        emit(
+          'gauge:globalAgentRequests',
+          getCountFromGlobalAgent(globalAgent.freeSockets)
+        );
       }
     },
   });
