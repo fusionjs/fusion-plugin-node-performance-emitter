@@ -139,7 +139,7 @@ test('tracking emit messages', t => {
   perfService.stopTrackingSocketUsage();
 
   setImmediate(() => {
-    t.assert(emitNumberTracker === 6, 'all emits should be captured');
+    t.assert(emitNumberTracker === 7, 'all emits should be captured');
     t.end();
   });
 });
