@@ -10,7 +10,6 @@ Collects stats on the event loop lag, garbage collection events, and memory stat
 
 ### Table of contents
 
-
 * [Installation](#installation)
 * [Usage](#usage)
 * [Setup](#setup)
@@ -91,7 +90,7 @@ return app;
 
 #### Registration API
 
-##### NodePerformanceEmitter
+##### `NodePerformanceEmitter`
 
 ```js
 import NodePerformanceEmitter from 'fusion-plugin-node-performance-emitter';
@@ -99,7 +98,7 @@ import NodePerformanceEmitter from 'fusion-plugin-node-performance-emitter';
 
 The plugin. Should typically be registered to [`NodePerformanceEmitterToken`](#nodeperformanceemittertoken).
 
-##### NodePerformanceEmitterToken
+##### `NodePerformanceEmitterToken`
 
 ```js
 import {NodePerformanceEmitterToken} from 'fusion-plugin-node-performance-emitter';
@@ -109,11 +108,11 @@ Typically should be registered with [`NodePerformanceEmitter`](NodePerformanceEm
 
 #### Dependencies
 
-##### UniversalEventsToken
+##### `UniversalEventsToken`
 
 Required. See [https://github.com/fusionjs/fusion-plugin-universal-events](https://github.com/fusionjs/fusion-plugin-universal-events)
 
-##### TimersToken
+##### `TimersToken`
 
 ```js
 import {TimersToken} from 'fusion-plugin-node-performance-emitter';
@@ -130,7 +129,7 @@ type Timers = {
 }
 ```
 
-##### EventLoopLagIntervalToken
+##### `EventLoopLagIntervalToken`
 
 ```js
 import {EventLoopLagIntervalToken} from 'fusion-plugin-node-performance-emitter';
@@ -138,7 +137,7 @@ import {EventLoopLagIntervalToken} from 'fusion-plugin-node-performance-emitter'
 
 Optional. Server-only. The interval between event loop lag measurements. Defaults to `10000`.
 
-##### MemoryIntervalToken
+##### `MemoryIntervalToken`
 
 ```js
 import {MemoryIntervalToken} from 'fusion-plugin-node-performance-emitter';
@@ -146,7 +145,7 @@ import {MemoryIntervalToken} from 'fusion-plugin-node-performance-emitter';
 
 Optional. Server-only. The interval between memory measurements. Defaults to `10000`.
 
-##### SocketIntervalToken
+##### `SocketIntervalToken`
 
 ```js
 import {SocketIntervalToken} from 'fusion-plugin-node-performance-emitter';
